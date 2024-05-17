@@ -17,14 +17,14 @@ const investimentos = {
     ]
 };
 
-// Função para formatar o valor
+/* Função para formatar o valor
 function formatarNumero(input) {
     let valor = input.value.replace(/\D/g, '');
     valor = (valor / 100).toFixed(2) + '';
     valor = valor.replace('.', ',');
     valor = valor.replace(/(\d)(?=(\d{3})+\,)/g, '$1.');
     input.value = valor;
-}
+}*/
 
 // Função para calcular o valor final do investimento (Calculadora 1)
 function calcularInvestimento1(valorInvestido, jurosAnuais, periodoMeses) {
