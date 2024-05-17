@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Investimento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Calculadora de Investimento</h1>
+
+        <!-- Calculadora 1 -->
+        <div class="calculadora">
+            <h2>Calculadora 1</h2>
+            <div class="input-section">
+                <label for="select-banco1">Escolha o banco:</label>
+                <select id="select-banco1" onchange="atualizarOpcoesInvestimento1()">
+                    <option value="" disabled selected>Selecione um banco</option>
+                    <option value="Bradesco">Bradesco</option>
+                    <option value="Itaú">Itaú</option>
+                    <option value="Banco do Brasil">Banco do Brasil</option>
+                </select>
+            </div>
+            <div class="input-section" id="opcoes-investimento1">
+                <!-- Opções de investimento serão adicionadas aqui via JavaScript -->
+            </div>
+            <div class="input-section">
+                <label for="periodo1">Período do investimento (meses):</label>
+                <input type="number" id="periodo1" placeholder="Período do investimento (meses)" inputmode="numeric" pattern="[0-9]*" min="1">
+            </div>
+            <div class="input-section">
+                <label for="valor1">Valor investido:</label>
+                <input type="number" id="valor1" placeholder="Valor investido" oninput="formatarNumero(this)">
+            </div>
+            <button onclick="simularInvestimento1()">Simule seu investimento</button>
+            <div id="resultado1" class="resultado"></div>
+        </div>
+
+        <!-- Calculadora 2 -->
+        <div class="calculadora">
+            <h2>Calculadora 2</h2>
+            <div class="input-section">
+                <label for="select-banco2">Escolha o banco:</label>
+                <select id="select-banco2" onchange="atualizarOpcoesInvestimento2()">
+                    <option value="" disabled selected>Selecione um banco</option>
+                    <option value="Bradesco">Bradesco</option>
+                    <option value="Itaú">Itaú</option>
+                    <option value="Banco do Brasil">Banco do Brasil</option>
+                </select>
+            </div>
+            <div class="input-section" id="opcoes-investimento2">
+                <!-- Opções de investimento serão adicionadas aqui via JavaScript -->
+            </div>
+            <div class="input-section">
+                <label for="periodo2">Período do investimento (meses):</label>
+                <input type="number" id="periodo2" placeholder="Período do investimento (meses)" inputmode="numeric" pattern="[0-9]*" min="1">
+            </div>
+            <div class="input-section" id="valores-investimento-mensal">
+                <!-- Inputs para os valores de investimento mensal serão adicionados aqui via JavaScript -->
+            </div>
+            <button onclick="simularInvestimento2()">Simule seu investimento</button>
+            <div id="resultado2" class="resultado"></div>
+        </div>
+
+    </div>
+
+    <script src="logica.js"></script>
+    <script src="calculadora.js"></script>
+
+</body>
+
+</html>
